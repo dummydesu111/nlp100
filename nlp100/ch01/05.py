@@ -3,11 +3,11 @@ example_word = example_chara.split()
 
 
 def create_ngram(target, n):
-    len_sent = len(target)
-    assert 0 < n <= len_sent, 'Invalid "n"'
+    len_target = len(target)
+    assert 0 < n <= len_target, 'Invalid "n"'
     result = []
     
-    for i in range(len_sent-n+1):
+    for i in range(len_target-n+1):
         result.append(target[i:i+n])
     return result
 
